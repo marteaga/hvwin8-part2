@@ -1,0 +1,18 @@
+﻿@if (Request.IsAuthenticated)
+{
+<ul>
+    <li>
+        <img src='@Samples.HvMvc.HVUserImageHelper.Default.GetImageUrl((User as Samples.HvMvc.HVPrincipal).RecordId)' style="width:30px; height:30px; vertical-align: top; margin-right:10px">
+        Hi, @Html.ActionLink((User as Samples.HvMvc.HVPrincipal).Name, "Details", "Account", routeValues: null, htmlAttributes: new { @class = "username" }) |
+    </li>
+    <li>
+        @Html.ActionLink("Log off", "LogOff", "Account")
+    </li>
+</ul>
+}
+else
+{
+    <ul>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

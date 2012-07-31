@@ -1,0 +1,103 @@
+﻿@model Samples.HvMvc.Models.JournalEntry
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>JournalEntry</legend>
+
+        @Html.HiddenFor(model => model.UserId)
+        @Html.HiddenFor(model => model.RecordId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MissedWorkSchool)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MissedWorkSchool)
+            @Html.ValidationMessageFor(model => model.MissedWorkSchool)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SawDoctor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SawDoctor)
+            @Html.ValidationMessageFor(model => model.SawDoctor)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SawEmergency)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SawEmergency)
+            @Html.ValidationMessageFor(model => model.SawEmergency)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PeakFlowReading)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PeakFlowReading)
+            @Html.ValidationMessageFor(model => model.PeakFlowReading)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsDay)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsDay)
+            @Html.ValidationMessageFor(model => model.IsDay)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Latitude)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Latitude)
+            @Html.ValidationMessageFor(model => model.Latitude)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Longitude)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Longitude)
+            @Html.ValidationMessageFor(model => model.Longitude)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Created)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Created)
+            @Html.ValidationMessageFor(model => model.Created)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EntryDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EntryDate)
+            @Html.ValidationMessageFor(model => model.EntryDate)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

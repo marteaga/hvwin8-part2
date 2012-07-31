@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Samples.HvMvc.Models.JournalEntry>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecordId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MissedWorkSchool)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SawDoctor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SawEmergency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PeakFlowReading)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EntryDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecordId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MissedWorkSchool)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SawDoctor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SawEmergency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeakFlowReading)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Latitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EntryDate)
+        </td>
+        <td>
+@Html.ActionLink("Edit", "Edit", new { id=item.HvId }) |
+@Html.ActionLink("Details", "Details", new { id=item.HvId }) |
+@Html.ActionLink("Delete", "Delete", new { id=item.HvId })
+        </td>
+    </tr>
+}
+
+</table>

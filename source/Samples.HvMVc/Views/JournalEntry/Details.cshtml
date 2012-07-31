@@ -1,0 +1,93 @@
+﻿@model Samples.HvMvc.Models.JournalEntry
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>JournalEntry</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RecordId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RecordId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MissedWorkSchool)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MissedWorkSchool)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SawDoctor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SawDoctor)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SawEmergency)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SawEmergency)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PeakFlowReading)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PeakFlowReading)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsDay)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsDay)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Latitude)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Latitude)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Longitude)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Longitude)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Created)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Created)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EntryDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EntryDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Samples.HvMvc.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*" schemaVersion="2012-05.1.7">
+  <Role name="Samples.HvMvc">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=sampleshvmvc;AccountKey=+La88lUFw5B7VpP/PPi621wompDCc+oPqf5/PVn+DW27VHVjdA8uumTZ6MpBeHF5eBedVBeEyfYDWIQ9vQIqng==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="mark" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEFan+9JumfysT+Pi3AEtcBowDQYJKoZIhvcNAQEBBQAEggEAhnA6hhQR7Ahok7iK7acNohwN4tqAKtTXcQdL/2vJhLIoBItAy765kJlrGPiTVzy/ckrDCtkHtG2Jvwf/qN3ybofVELMb/3I/NxfptBbcN2MQuTWpZaup11S2HGDnFl2VNG10YmZOe7R3qMZX7wF+iO+2RWNWpTnM5fBMTkYVCCsajXThn5UFBRju1JujV288BqogDJz98mZ4S4sggclRoByIAnszedSvV2Cg5MW9IXPNlV6sak2z43IwPhIsSDNYY+yC0ECcnij0e6os6+Tk5FEXezx70mqfmyX47QbBRBF7ejkilT/wu7nJd5LFrnAyAIe1iCfXWgCghcp208X/4DAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECAeHIysOkeXMgBCs4XkgOsRGZBo5ZPWea4ej" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="3013-07-27T23:59:59.0000000-04:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="5A3932F68C280B781FA06AABD83D4E7FC86A9FA6" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

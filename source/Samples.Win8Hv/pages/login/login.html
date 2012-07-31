@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>login</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0.RC/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0.RC/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0.RC/js/ui.js"></script>
+    
+    <link href="login.css" rel="stylesheet" />
+    <script src="login.js"></script>
+</head>
+<body>
+<!-- BEGINSETTINGSFLYOUT -->
+<div id="login" data-win-control="WinJS.UI.SettingsFlyout" aria-label="App Settings Flyout" data-win-options="{settingsCommandId:'login'}">
+    <!-- Use either 'win-ui-light' or 'win-ui-dark' depending on the contrast between the header title and background color -->
+    <div class="win-ui-dark win-header" style="background-color: #00b2f0">
+        <!-- Background color reflects app's personality -->
+        <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton"></button>
+        <div class="win-label">Sign In</div>
+    </div>
+    <div class="win-content">
+        <div class="win-settings-section">
+            <p>Enter your username and password to Asthma Journal to sign in</p>
+            <div>
+                <label>Username</label>
+                <input type="text" aria-label="Enter email account" id="user" />
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="text" aria-label="Enter email account" id="pass" />
+            </div>
+            <button id="btnlogin" type="button">Login</button>
+        </div>
+
+    </div>
+</div>
+<!-- ENDSETTINGSFLYOUT -->
+</body>
+</html>
